@@ -1,0 +1,99 @@
+# Integer values are values like: 1, 2, 32, 242 Not like 1.2, 224.9
+
+# Path to video stream. The value can be 0, 1, 2 to open the webcams of your computer.
+# The value can also be rtp://224.1.1.1:5200/ to open a stream from an IP.
+video_path: "rtp://224.1.1.1:5200/"
+
+# How much reduce the size of the image going to the Aruco detection algorithm.
+# Bigger image takes longer to process but is more accurate.
+# Smaller image is faster to process but might not be so accurate
+aruco_detection_resize_factor: 0.4 
+
+# Show the image going to the Aruco detection algorithm.
+show_aruco_detection_image: false
+
+box:
+    transparentness: 0.5 # 0.0 = Not transparent, 1.0 = Fully tranparent, 0.5 = Half transparent
+    x_size: 80 # Value is interger
+    y_size: 30 # Value is interger
+
+text:
+    # The available fonts are here:
+    # https://docs.opencv.org/master/d6/d6e/group__imgproc__draw.html#ga0f9314ea6e35f99bb23f29567fc16e11
+    font_name: "FONT_HERSHEY_SIMPLEX"
+    size: 0.6 # Value is decimal number
+    offset_x: -15 # Value is interger
+    offset_y: 2 # Value is interger
+    thickness: 2 # Value is interger
+
+# Colors are in from: [RED, GREEN, BLUE]. The values range from 0 to 255.
+# 255 is a lot of that color, 0 is none of that color
+# Check colors for example from https://www.colorspire.com/rgb-color-wheel/
+
+defaults:
+    # Choose if Arucos not listed in below robots-list are tagged
+    tag_unknown_arucos: true
+    name: "????"
+    box_color: [127, 0, 127]
+    text_color: [255, 255, 255]
+
+robots:
+    - aruco_id: 3 # 4
+      name: "Zero-1"
+      box_color: [255, 0, 0]
+      text_color: [0, 255, 0]
+
+    - aruco_id: 5
+      name: "Zero-2"
+      box_color: [127, 0, 127]
+      text_color: [255, 255, 255]
+    
+    - aruco_id: 6
+      name: "Aiso-1"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 7
+      name: "Aiso-2"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 8
+      name: "Proc-1"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 9
+      name: "Proc-2"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 10
+      name: "Hiek-1"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 11
+      name: "Hiek-2"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 12
+      name: "Hobi-1"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 13
+      name: "Hobi-2"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 14
+      name: "Pull-1"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
+
+    - aruco_id: 15
+      name: "Pull-2"
+      box_color: [255, 0, 127]
+      text_color: [255, 255, 0]
